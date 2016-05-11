@@ -14,7 +14,9 @@ defmodule Ocr.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger,
+                    :httpoison,
+                    :goth]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +29,11 @@ defmodule Ocr.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:httpoison, "~> 0.8.3"},
+      {:poison, "~> 2.1.0"},
+      {:goth, "~> 0.1.2"},
+      {:credo, "~> 0.3", only: [:dev]}
+    ]
   end
 end
