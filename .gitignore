@@ -1,6 +1,7 @@
 /_build
 /cover
 /deps
+/config/google-creds.json
 erl_crash.dump
 *.ez
 *.beam
