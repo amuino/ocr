@@ -1,4 +1,6 @@
 defmodule Ocr do
+  def from_url(url), do: HTTPoison.get!(url).body |> Ocr.from_image
+
   def from_path(path), do: path |> File.read! |> Ocr.from_image
 
   def from_image(image_data), do: image_data |> Base.encode64 |> Ocr.from_base64
