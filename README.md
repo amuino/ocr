@@ -1,20 +1,29 @@
 # Ocr
 
-**TODO: Add description**
+A simple Elixir API for using the [Google Vision API](https://cloud.google.com/vision/) OCR.
 
-## Installation
+## Configuration
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+You will need to create a project and get the JSON credentials [from your Google Console](https://console.cloud.google.com/apis/credentials).
 
-  1. Add ocr to your list of dependencies in `mix.exs`:
+Then save the file as `config/google-creds.js`
 
-        def deps do
-          [{:ocr, "~> 0.0.1"}]
-        end
+Be sure to get all dependencies:
+```
+mix deps.get
+```
 
-  2. Ensure ocr is started before your application:
+## Playing
 
-        def application do
-          [applications: [:ocr]]
-        end
 
+Start up a REPL with
+```
+iex -S mix
+```
+
+Then use the methods in the `Ocr` module to get some text back:
+
+```
+iex(1)> Ocr.from_url "http://ih0.redbubble.net/image.16611809.2383/fc,550x550,black.jpg"
+"GETS ELIKIR PR ACCEPTED\nI SAID WHO WANTS TO\nFUCKING TOUCH ME?\nSuranyami\n"
+```
