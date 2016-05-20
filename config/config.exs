@@ -29,5 +29,4 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :goth,
-  json: "config/google-creds.json" |> File.read!
+config :goth, json: "config/google-creds.json" |> File.read!
