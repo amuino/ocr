@@ -17,6 +17,7 @@ defmodule Ocr.GoogleVision do
       get_in(["responses", &first/3, "textAnnotations", &first/3, "description"])
   end
 
+  defp first(:get, nil, _), do: nil
   defp first(:get, data, next) do
     data |> List.first |> next.()
   end
