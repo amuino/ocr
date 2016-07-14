@@ -6,7 +6,7 @@ A simple Elixir API for using the [Google Vision API](https://cloud.google.com/v
 
 You will need to create a project and get the JSON credentials [from your Google Console](https://console.cloud.google.com/apis/credentials).
 
-Then save the file as `config/google-creds.js`
+Then save the file as `config/google-creds.json`
 
 Be sure to get all dependencies:
 ```
